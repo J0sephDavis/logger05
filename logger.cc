@@ -15,7 +15,7 @@ logger::~logger() {
 	send("logger::~logger", logTRACE);
 	os << std::endl; //flush
 	std::time_t time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	const std::string log_prefix = "rss-feed-";
+	const std::string log_prefix = LOG_PREFIX;
 	const std::string log_suffix = ".log";
 	//
 	std::stringstream datetime;

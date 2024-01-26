@@ -3,7 +3,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(logger
   LANGUAGES CXX
-  VERSION 1.0.1
+  VERSION 1.1.1
   DESCRIPTION "A simple single instance logger"
 )
 add_library(liblogger
@@ -12,6 +12,7 @@ add_library(liblogger
 )
 #configure file
 set(LOG_FOLDER "${CMAKE_BINARY_DIR}/../data/logs/")
+set(LOG_PREFIX "${CMAKE_PROJECT_NAME}(${CMAKE_PROJECT_VERSION})")
 configure_file("logger_config.h.in" "logger_config.h" @ONLY)
 #
 target_include_directories(liblogger
