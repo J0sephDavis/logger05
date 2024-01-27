@@ -2,7 +2,7 @@
 #define RSS_LOGGER_IMPLEMENT
 #include <logger.hh>
 
-namespace rssfeed {
+namespace logger {
 	namespace fs = std::filesystem;
 logger& logger::getInstance(logLevel_t level) {
 	//https://stackoverflow.com/questions/335369/finding-c-static-initialization-order-problems/335746#335746

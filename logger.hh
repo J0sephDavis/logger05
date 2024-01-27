@@ -9,7 +9,7 @@
 #include <queue>
 #include <logger_config.h>
 //
-namespace rssfeed {
+namespace logger {
 //begin namespace
 enum logLevel_t {
 	logDEBUG, 	//

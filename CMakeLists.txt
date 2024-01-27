@@ -3,7 +3,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(logger
   LANGUAGES CXX
-  VERSION 1.1.2
+  VERSION 1.2.2
   DESCRIPTION "A simple single instance logger"
 )
 add_library(liblogger
