@@ -23,22 +23,22 @@ class logger {
 	//Modified from: https://drdobbs.com/cpp/logging-in-c/201804215
 	//TODO: have log file update during program runtime, not just when it exits successfully...
 	public:
-		inline static logger& getInstance(logLevel_t level = logINFO);
-		inline logger(logger const &) = delete;
-		inline void operator=(logger const &) = delete;
-		inline ~logger();
-		inline void trace(std::string message);
-		inline void debug(std::string message);
-		inline void info(std::string message);
-		inline void warn(std::string message);
-		inline void error(std::string message);
+		static logger& getInstance(logLevel_t level = logINFO);
+		logger(logger const &) = delete;
+		void operator=(logger const &) = delete;
+		~logger();
+		void trace(std::string message);
+		void debug(std::string message);
+		void info(std::string message);
+		void warn(std::string message);
+		void error(std::string message);
 	private:
-		inline logger(logLevel_t level);
+		logger(logLevel_t level);
 	private:
-		inline std::string levelString(logLevel_t level);
-		inline void clear_queue();
+		std::string levelString(logLevel_t level);
+		void clear_queue();
 		//sends a message to the log
-		inline void send(std::string message, logLevel_t level = logINFO);
+		void send(std::string message, logLevel_t level = logINFO);
 	private:
 		logLevel_t loggerLevel;
 		//the actual output stream
