@@ -38,19 +38,19 @@ logger::~logger() {
  * Replace the send(...) with a (void)message. Then the compiler should understand
  * that this code is pointless, whereupon it will ignore it.
  * */
-inline void logger::trace(std::string message) {
+void logger::trace(std::string message) {
 	send(std::move(message), logTRACE);
 }
-inline void logger::debug(std::string message) {
+void logger::debug(std::string message) {
 	send(std::move(message), logDEBUG);
 }
-inline void logger::info(std::string message) {
+void logger::info(std::string message) {
 	send(std::move(message), logINFO);
 }
-inline void logger::warn(std::string message) {
+void logger::warn(std::string message) {
 	send(std::move(message), logWARN);
 }
-inline void logger::error(std::string message) {
+void logger::error(std::string message) {
 	send(std::move(message), logERROR);
 }
 logger::logger(logLevel_t level):
