@@ -2,6 +2,7 @@
 #define RSS_LOGGER
 #include <filesystem>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 #include <chrono>
 #include <ctime>
