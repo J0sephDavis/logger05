@@ -57,6 +57,7 @@ logger::logger(logLevel_t level):
 	loggerLevel(level)
 {
 	send("logger::logger", logTRACE);
+	send("LEVEL" + levelString(level));
 	send("VERSION" + std::string(PROJECT_VERSION));
 };
 std::string logger::levelString(logLevel_t level) {
