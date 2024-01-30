@@ -47,7 +47,6 @@ class logger {
 		std::queue<std::ostringstream>  messages;
 		std::mutex queue_write;
 };
-static logger& log = logger::getInstance(logTRACE);
 //end namespace
 }
 #endif
